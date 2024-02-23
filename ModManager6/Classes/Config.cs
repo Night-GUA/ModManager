@@ -45,7 +45,7 @@ namespace ModManager6.Classes
                 }
                 this.lg = lg;
                 this.theme = theme;
-                this.sources = sources != null ? sources : new List<string>() { ModManager.apiURL + "/mm" };
+                this.sources = sources != null ? sources : new List<string>() { "https://github.com/Night-GUA/ModManager/blob/v6/ModManager6/ModList.json" };
                 this.modStates = modStates != null ? modStates : new List<ModState>() { };
             } catch (Exception e)
             {
