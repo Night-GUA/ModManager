@@ -1,4 +1,4 @@
-﻿; -- CodeDependencies.iss --
+; -- CodeDependencies.iss --
 ;
 ; This script shows how to download and install any dependency such as .NET,
 ; Visual C++ or SQL Server during your application's installation process.
@@ -9,6 +9,9 @@
 ; -----------
 ; SHARED CODE
 ; -----------
+[Setup]
+ShowLanguageDialog = yes
+
 [Code]
 // types and variables
 type
@@ -631,11 +634,11 @@ end;
 #define UseSql2017Express
 #define UseSql2019Express
 
-#define MyAppSetupName 'MyProgram'
-#define MyAppVersion '1.0'
-#define MyAppPublisher 'Inno Setup'
-#define MyAppCopyright 'Copyright © Inno Setup'
-#define MyAppURL 'https://jrsoftware.org/isinfo.php'
+#define MyAppSetupName 'ModManager'
+#define MyAppVersion '6.0'
+#define MyAppPublisher 'Yu'
+#define MyAppCopyright 'Copyright © Yu'
+#define MyAppURL 'https://github.com/Night-GUA/ModManager/'
 
 AppName={#MyAppSetupName}
 AppVersion={#MyAppVersion}
@@ -660,9 +663,8 @@ PrivilegesRequired=admin
 ArchitecturesInstallIn64BitMode=x64
 
 [Languages]
-Name: en; MessagesFile: "compiler:Default.isl"
-Name: nl; MessagesFile: "compiler:Languages\Dutch.isl"
-Name: de; MessagesFile: "compiler:Languages\German.isl"
+Name: "english"; MessagesFile: "compiler:Languages\Chinese.isl"
+; Name: “english”;MessagesFile:“compiler:Languages\English.isl”
 
 [Files]
 #ifdef UseNetCoreCheck
